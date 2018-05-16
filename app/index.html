@@ -1,0 +1,125 @@
+
+<!--TELL DJANGO TO LOAD STATIC FILES-->
+<!--{% load static %}-->
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en" ng-app="sourceApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="sourceApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="sourceApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="sourceApp" class="no-js"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <base href="/">
+
+
+    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="static/app.css">
+  <link rel="stylesheet" href="static/css/custom.css">
+  <link rel="stylesheet" href="static/css/animations.css">
+  <link rel="stylesheet" href="static/views/members_view/css/member.css">
+  <link rel="stylesheet" href="static/views/news_view/css/news.css">
+
+
+    <!--THESE ARE USED TO LOAD SOURCES FOR DJANGO-->
+    <!--<link rel="stylesheet" href="{% static 'bower_components/html5-boilerplate/dist/css/normalize.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'bower_components/html5-boilerplate/dist/css/main.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'bower_components/components-font-awesome/css/font-awesome.min.css' %}">-->
+
+    <!--<link rel="stylesheet" href="{% static 'app.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/custom.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/animations.css' %}">-->
+
+    <!--<link rel="stylesheet" href="{% static 'views/members_view/css/member.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'views/news_view/css/news.css' %}">-->
+
+
+</head>
+<body>
+
+
+
+
+<ng-include src="'static/html/navbar.html'"></ng-include>
+
+<div class="container-fluid sourceMainContainer">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="col-12 sourcePage" ng-view></div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-loader/angular-loader.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="static/app.js"></script>
+    <script src="static/js/routes.js"></script>
+    <script src="static/js/httpConfig.js"></script>
+    <script src="static/js/authentication/authenticationCtrl.js"></script>
+    <script src="static/js/authentication/authenticationSrv.js"></script>
+
+
+    <script src="static/js/navbarCtrl.js"></script>
+
+
+
+    <script src="static/views/frontpage_view/frontPageCtrl.js"></script>
+    <script src="static/views/members_view/membersCtrl.js"></script>
+    <script src="static/views/news_view/newsCtrl.js"></script>
+    <script src="static/views/happenings_view/happeningsCtrl.js"></script>
+
+
+    <!--FOR DJANGOOOOOOO-->
+    <!--<script src="{% static 'bower_components/angular/angular.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/angular-cookies/angular-cookies.min.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/angular-loader/angular-loader.min.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/angular-animate/angular-animate.min.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/tether/dist/js/tether.min.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>-->
+    <!--<script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>-->
+    <!--<script src="{% static 'app.js' %}"></script>-->
+    <!--<script src="{% static 'js/routes.js' %}"></script>-->
+    <!--<script src="{% static 'js/httpConfig.js' %}"></script>-->
+    <!--<script src="{% static 'js/authentication/authenticationCtrl.js' %}"></script>-->
+    <!--<script src="{% static 'js/authentication/authenticationSrv.js' %}"></script>-->
+
+
+    <!--<script src="{% static 'js/navbarCtrl.js' %}"></script>-->
+
+
+    <!--<script src="{% static 'views/frontpage_view/frontPageCtrl.js' %}"></script>-->
+    <!--<script src="{% static 'views/members_view/membersCtrl.js' %}"></script>-->
+    <!--<script src="{% static 'views/news_view/newsCtrl.js' %}"></script>-->
+    <!--<script src="{% static 'views/happenings_view/happeningsCtrl.js' %}"></script>-->
+
+</body>
+</html>

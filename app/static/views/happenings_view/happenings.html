@@ -1,0 +1,68 @@
+
+<div class="sourceWrapper">
+
+    <H1>TAPAHTUMAT</H1>
+    <button ng-if="currentUser" class="btn" data-toggle="modal" data-target="#happeningModal"><i class="fa fa-plus"></i></button>
+
+    <div class="row">
+
+        <div ng-if="happenings.length > 0" class="sourceContainer col-sm-12">
+
+            <H2>{{currentPage}}/{{totalPages}}</H2>
+
+            <div class="sourcePagination">
+                <nav aria-label="News page navigation">
+                    <ul class="pagination">
+                        <li class="page-item" ng-class="{disabled: currentPage == 1}"><a class="page-link" href="" ng-click="previousPage()">Previous</a></li>
+                        <li class="page-item" ng-class="{disabled: currentPage == totalPages}"><a class="page-link" href="" ng-click="nextPage()">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sourceData" ng-repeat="happening in happeningsData">
+                <h2>{{happening.title}}</h2>
+                <h3>{{happening.date}}</h3>
+                <button ng-if="currentUser" class="btn" ng-click="removeHappening(happening)"><i class="fa fa-times" aria-label="Remove"></i></button>
+                <div><p>{{happening.content}} </p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="happeningModal" tabindex="-1" role="dialog" aria-labelledby="happeningModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="happeningsModalLabel">Tapahtuma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="happeningHeader" class="col-form-label">Nimi</label>
+                            <input ng-model="happeningTitle" type="text" class="form-control" id="happeningHeader">
+                        </div>
+                        <div class="form-group">
+                            <label for="happeningContent" class="col-form-label">Tiedot</label>
+                            <textarea rows="5" ng-model="happeningContent" type="text" class="form-control" id="happeningContent">
+                            </textarea>
+                        </div>
+                        <label for="happeningDate" class="col-form-label">Päivämäärä</label>
+                        <div class="input-group date" data-provide="datepicker" data-date-format="dd.mm.yyyy">
+                            <input ng-model="happeningDate" type="text" class="form-control" id="happeningDate">
+                            <div class="input-group-addon">
+                                <span class="fa fa-th"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sulje</button>
+                    <button type="button" class="btn btn-primary" ng-click="createHappening()" data-dismiss="modal">Lähetä</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

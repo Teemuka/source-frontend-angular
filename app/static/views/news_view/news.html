@@ -1,0 +1,62 @@
+<div class="sourceWrapper">
+
+    <H1>UUTISET</H1>
+    <button class="btn" ng-if="currentUser" data-toggle="modal" data-target="#newsTextModal"><i class="fa fa-plus"></i></button>
+
+    <div class="row">
+
+        <div ng-if="news.length > 0" class="sourceContainer col-sm-12">
+
+                <H2>{{currentPage}}/{{totalPages}}</H2>
+
+                <div class="sourcePagination">
+                    <nav aria-label="News page navigation">
+                        <ul class="pagination">
+                            <li class="page-item" ng-class="{disabled: currentPage == 1}"><a class="page-link" href="" ng-click="previousPage()">Previous</a></li>
+                            <li class="page-item" ng-class="{disabled: currentPage == totalPages}"><a class="page-link" href="" ng-click="nextPage()">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="sourceData" ng-repeat="newsText in newsTexts">
+                    <h2>{{newsText.title}}</h2>
+                    <button ng-if="currentUser" class="btn" ng-click="removeNews(newsText)"><i class="fa fa-times" aria-label="Remove"></i></button>
+                    <div><p>{{newsText.content}} </p></div>
+                </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="newsTextModal" tabindex="-1" role="dialog" aria-labelledby="newsTextModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsTextModalLabel">Uutinen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="newsTextHeader" class="col-form-label">Otsikko</label>
+                            <input ng-model="newsTextTitle" type="text" class="form-control" id="newsTextHeader">
+                        </div>
+                        <div class="form-group">
+                            <label for="newsTextContent" class="col-form-label">Teksti</label>
+                            <textarea rows="5" ng-model="newsTextContent" type="text" class="form-control" id="newsTextContent">
+                            </textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sulje</button>
+                    <button type="button" class="btn btn-primary" ng-click="createNew()" data-dismiss="modal">Lähetä</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

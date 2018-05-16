@@ -1,0 +1,17 @@
+{
+
+  "members" : [
+
+    {"name": "pekka", "email": "pekka@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "True"},
+    {"name": "liisa", "email": "liisa@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "False"},
+    {"name": "pirre", "email": "pirre@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "False"},
+    {"name": "paavo", "email": "paavo@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "False"},
+    {"name": "jarmo", "email": "jarmo@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "False"},
+    {"name": "tarmo", "email": "tarmo@pekka.fi", "motto":"pekattaa liikaa", "isAdmin" : "False"},
+    {}
+
+
+  ]
+
+
+}

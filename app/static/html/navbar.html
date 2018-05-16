@@ -1,0 +1,71 @@
+<!-- Content here -->
+
+
+<div ng-controller="navbarCtrl as ctrl">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top sourceNav">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">&lt;&lt;SOURCE&gt;&gt;></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" id="frontpage">
+                        <a class="nav-link" href="/#!/etusivu">Etusivu </a>
+                    </li>
+                    <li class="nav-item dropdown" id="members">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Jäsenet
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/#!/jasenet/admin">Hallitus</a>
+                            <a class="dropdown-item" href="/#!/jasenet/member">Muut hessut</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="news">
+                        <a class="nav-link" href="/#!/uutiset">Uutiset</a>
+                    </li>
+                    <li class="nav-item" id="happenings">
+                        <a class="nav-link" href="/#!/tapahtumat">Tapahtumat</a>
+                    </li>
+                </ul>
+
+                <a ng-if="!currentUser" class="nav-link" href="" data-toggle="modal" data-target="#loginModal">Kirjaudu</a>
+                <a ng-if="currentUser" class="nav-link" href="" ng-click="ctrl.logout()">Kirjaudu ulos</a>
+
+            </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Kirjaudu sisään</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="login-name" class="col-form-label">Käyttäjätunnus</label>
+                            <input ng-model="username" type="text" class="form-control" id="login-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password" class="col-form-label">Salasana</label>
+                            <input ng-model="password" type="password" class="form-control" id="login-password"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sulje</button>
+                    <button type="button" class="btn btn-primary" ng-click="ctrl.login()" data-dismiss="modal">Kirjaudu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,68 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.sourceMainContainer {
+
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: 15%;
+
+  }
+}
+
+@media screen and (min-width:800px) and (max-width:1500px) {
+  body {
+    padding-top: 7%;
+
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+    padding-top: 5%;
+
+  }
+}
+
+
+
+body {
+  color: white;
+  /*background: url("img/source_bg2.jpg") no-repeat fixed;*/
+
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+.sourcePage {
+  position: absolute;
+}
+
+
+

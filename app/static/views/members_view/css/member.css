@@ -1,0 +1,27 @@
+.sourceMemberContainer {
+
+    margin-bottom: 30px;
+
+
+}
+
+.sourceMemberPicture {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    width: 150px;
+
+}
+
+.sourceMemberPicture > img {
+
+    width: 100%;
+
+}
+
+.sourceMemberInfo {
+
+
+    display: inline-block;
+    float: left;
+}

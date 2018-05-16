@@ -1,0 +1,62 @@
+
+.sourceWrapper > H1 {
+
+    /*color: #00b3ee;*/
+    display: inline-block;
+    padding-bottom: 5%;
+
+}
+
+.sourceWrapper > button {
+
+    position: relative;
+    bottom: 7px;
+    right: -10px;
+    color: black;
+
+}
+
+.sourceContainer > H2 {
+
+    /*color: #00b3ee;*/
+    display: inline-block;
+    /*position: relative;*/
+    /*right: -30px;*/
+    float: right;
+    margin-left: 20px;
+
+}
+
+.sourceData {
+
+    margin-bottom: 5%;
+
+}
+
+.sourceData > button {
+
+    color: black;
+    width: 5px;
+    height: 5px;
+}
+
+.sourceData > button > i {
+
+    position: relative;
+    bottom: 9px;
+    right: 6px;
+}
+
+.sourcePagination {
+
+
+    float: right;
+    /*right: -200px;*/
+    /*top:-7px;*/
+    /*position: relative;*/
+    display: inline-block;
+    /*margin-right: 40px;*/
+
+}
+
+.ng-enter
